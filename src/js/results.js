@@ -1,4 +1,8 @@
 import '../css/results.css';
+import '@fortawesome/fontawesome-free/js/fontawesome'
+import '@fortawesome/fontawesome-free/js/solid'
+import '@fortawesome/fontawesome-free/js/regular'
+import '@fortawesome/fontawesome-free/js/brands'
 
 const weatherData = JSON.parse(localStorage.getItem("data"));
 console.log(weatherData);
@@ -25,6 +29,7 @@ weatherDescription.innerText = (weatherData.weather[0].description).toUpperCase(
 weatherLocation.innerText = `${weatherData.name}, ${weatherData.sys.country}`;
 weatherTemp.innerText = `${weatherData.main.temp}`;
 weatherTempUnit.innerHTML = `${celsius}`;
-feelsLikeInfo.innerHTML = `<span class = "sub-info">FEELS LIKE: </span>` + weatherData.main.feels_like;
-windInfo.innerHTML = `<span class = "sub-info">WIND: </span>`+ weatherData.wind.speed;
-humidityInfo.innerHTML = `<span class = "sub-info">HUMIDITY: </span>`+ weatherData.main.humidity;
+feelsLikeInfo.innerHTML =
+`<span class = "sub-info"> FEELS LIKE:</span>` + weatherData.main.feels_like + ` <span class = "temp-unit-other">${celsius}</span>`;
+windInfo.innerHTML = `<span class = "sub-info">WIND: </span>`+ weatherData.wind.speed + " MPH";
+humidityInfo.innerHTML = `<span class = "sub-info">HUMIDITY: </span>`+ weatherData.main.humidity + "%";

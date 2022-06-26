@@ -1,10 +1,14 @@
 .container {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100vh;
   font-size: 40px;
   background-color: #f8fafc;
+  font-family: 'Roboto', sans-serif;
+
+  gap: 20px;
 }
 
 .weather-container {
@@ -13,7 +17,6 @@
   gap: 5px;
   padding: 50px 40px;
   border-radius: 10px;
-  font-family: 'Roboto', sans-serif;
   background-color: white;
   box-shadow: 0 0 10px black;
   box-shadow: 0 0 10px black;
@@ -30,6 +33,11 @@
   border: 1px solid black;
 }
 
+.weather-header {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
 
 .weather-desc {
   font-size: 22px;
@@ -60,5 +68,44 @@
 
 .sub-info {
   color: black;
-  font-weight: 500;
+  font-weight: 300;
+}
+
+.temp-unit-other {
+  font-size: small;
+}
+
+.feels-like {
+  display: flex;
+  gap: 5px;
+}
+
+.home-btn {
+  text-decoration: none;
+  color: black;
+  background-color: #38bdf8;
+  font-size: large;
+  width: 50px;
+  height: 50px;
+  border-radius: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.fa-angles-left {
+  font-size: 2em;
+  color: white;
+}
+
+.home-btn:hover .fa-angles-left {
+  color: black;
+}
+
+.home-btn {
+  transition: all 0.2s;
+}
+.home-btn:hover  {
+  transform: scale(1.1);
+  border-radius: 50%;
 }
