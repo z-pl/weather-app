@@ -60,3 +60,7 @@ form {
   margin-top: 10px;
   color: #dc2626;
 }
+
+.weather.container {
+  color: red;
+}
